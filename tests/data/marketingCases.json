@@ -1,0 +1,23 @@
+[
+  {
+    "id": "TC1",
+    "project": "Marketing Campaign",
+    "column": "To Do",
+    "task": "Social media calender",
+    "tags": ["Feature"]
+  },
+  {
+    "id": "TC2",
+    "project": "Marketing Campaign",
+    "column": "In Progress",
+    "task": "Email campaign",
+    "tags": ["Design", "High Priority"]
+  },
+  {
+    "id": "TC3",
+    "project": "Marketing Campaign",
+    "column": "Review",
+    "task": "Landing page copy",
+    "tags": ["Design"]
+  }
+]

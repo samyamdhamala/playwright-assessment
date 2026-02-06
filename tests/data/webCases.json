@@ -1,0 +1,23 @@
+[
+  {
+    "id": "TC1",
+    "project": "Web Application",
+    "column": "To Do",
+    "task": "Implement user authentication",
+    "tags": ["Feature", "High Priority"]
+  },
+  {
+    "id": "TC2",
+    "project": "Web Application",
+    "column": "To Do",
+    "task": "Fix navigation bug",
+    "tags": ["Bug"]
+  },
+  {
+    "id": "TC3",
+    "project": "Web Application",
+    "column": "In Progress",
+    "task": "Design system updates",
+    "tags": ["Design"]
+  }
+]
