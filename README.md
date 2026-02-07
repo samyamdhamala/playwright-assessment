@@ -18,17 +18,18 @@ All test scenarios are driven from JSON files to minimize code duplication and i
 
 ```text
 .
+├── data/
+│   ├── webCases.json        # Web test scenarios
+│   ├── mobileCases.json     # Mobile test scenarios
+|   ├── marketingCases.json  # Maketing test scenarios (future expansion)
+│
 ├── pages/
 │   ├── login.page.js        # Login page actions and assertions
 │   ├── board.page.js        # Project board interactions and validations
 │
-├── data/
-│   ├── webCases.json        # Web test scenarios
-│   ├── mobileCases.json     # Mobile test scenarios
-│
 ├── project.test.js          # Data-driven test runner
 ├── playwright.config.js
-└── README.md
+|── README.md
 ```
 
 ## ▶️ How to Run the Tests
