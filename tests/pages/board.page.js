@@ -1,3 +1,10 @@
+/**
+ * BoardPage
+ * ----------
+ * Page Object representing the project board after login.
+ * Responsible for opening projects and validating cards, columns, and tags.
+ */
+
 const { expect } = require("@playwright/test");
 
 class BoardPage {
@@ -6,10 +13,11 @@ class BoardPage {
   }
 
   async openProject(projectName) {
+    // select project dynamically using role+name and confirm
     await this.page
       .getByRole("button", { name: new RegExp(`^${projectName}`, "i") })
       .click();
-
+  
     await expect(
       this.page
         .getByRole("banner")
@@ -24,7 +32,7 @@ class BoardPage {
     });
     const column = columnHeading.locator("xpath=..");
 
-    // Find card title (NOT exact — UI wraps text)
+    // Find card title (text may be wrapped in UI)
     const title = column.getByText(cardTitle).first();
     await expect(title).toBeVisible({ timeout: 10000 });
 

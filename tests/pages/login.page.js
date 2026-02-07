@@ -1,3 +1,11 @@
+/**
+ * LoginPage
+ * -----------
+ * Page Object representing the authentication screen.
+ * Handles navigation to the app and signing in.
+ * Keeps login logic separate from test flow.
+ */
+
 const { expect } = require("@playwright/test");
 
 class LoginPage {
@@ -6,8 +14,11 @@ class LoginPage {
   }
 
   async open() {
+    //app entry point navigation
     await this.page.goto("https://animated-gingersnap-8cf7f2.netlify.app/");
-    await expect(
+    
+    // assert login page is loaded
+    await expect( 
       this.page.getByRole("heading", { name: "Project Board Login" })
     ).toBeVisible();
   }
@@ -17,7 +28,7 @@ class LoginPage {
     await this.page.getByLabel("Password").fill("password123");
     await this.page.getByRole("button", { name: "Sign in" }).click();
 
-    // Unique confirmation after login
+    // Check Unique confirmation to verify login sucess  
     await expect(this.page.getByText("Projects", { exact: true })).toBeVisible();
   }
 }
